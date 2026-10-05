@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; overflow-x: hidden; }
+body {
+  background: #0a1020;
+  color: #e8edf4;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keyboard accessibility */
+:focus-visible { outline: 3px solid #ffb347; outline-offset: 3px; }
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 100;
+  background: #ffb347; color: #0a1020; padding: .6rem 1rem; border-radius: .5rem; font-weight: 600;
+  transition: top .2s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Hint the browser which properties will animate (only on the animated elements) */
+.char, .car-scroll, .wheel, .stat, .hero-glow { will-change: transform, opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .char, .car-scroll, .wheel, .stat, .hero-glow { will-change: auto; }
+}
