@@ -43,7 +43,4 @@ https://sanikabobade01.github.io/scroll-hero-animation/
 ## GitHub Repository
 https://github.com/sanikabobade01/scroll-hero-animation
 
-## How the animation works (interview notes)
-- `gsap.context()` scopes selectors to the component and `ctx.revert()` cleans up on unmount.
-- `gsap.matchMedia()` gives separate behaviour for desktop/mobile and for reduced motion.
-- The intro is a normal timeline. The scroll animation is a second timeline whose `scrollTrigger` has `pin: true` and `scrub: 1`, so its progress equals scroll progress.
+
